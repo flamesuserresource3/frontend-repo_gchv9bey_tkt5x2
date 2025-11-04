@@ -1,14 +1,15 @@
-import Spline from '@splinetool/react-spline';
+import Tumbler3D from './Tumbler3D';
 
 export default function Hero() {
   return (
     <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0b0b12] via-[#0b0b12] to-black">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/nnNYb3ZFbRxKghMM/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-      </div>
+      {/* 3D Tumbler Background */}
+      <Tumbler3D />
 
+      {/* Gradient overlay should not block interaction with Spline */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-black/20 to-transparent" />
 
+      {/* Hero Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white drop-shadow">
           Pro Gaming Tumblers
